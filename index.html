@@ -16,9 +16,16 @@
 
     <div id="map-view"></div>
 
+    <div id="bar-view"></div>
+
     <script type="text/javascript">
       let view = "js/map-view.vg.json";
       vegaEmbed("#map-view", view)
+        .then(function (result) {})
+        .catch(console.error);
+
+      let vieww = "js/bar-chart.vg.json";
+      vegaEmbed("#bar-view", vieww)
         .then(function (result) {})
         .catch(console.error);
     </script>

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "data/countries-happiness-2022.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.country == 'Australia' || datum.country == 'Canada' || datum.country == 'USA' || datum.country == 'China' || datum.country == 'Russia' || datum.country == 'New Zealand' || datum.country == 'UK' || datum.country == 'Finland' || datum.country == 'Sweden' || datum.country == 'Norway' || datum.country == 'Denmark' || datum.country == 'Iceland' || datum.country == 'Netherlands' || datum.country == 'Switzerland' || datum.country == 'Germany' || datum.country == 'Austria' || datum.country == 'Belgium' || datum.country == 'Luxembourg' || datum.country == 'France' || datum.country == 'Spain' || datum.country == 'Portugal' || datum.country == 'Italy' || datum.country == 'Greece'"
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "y": {
+      "field": "score",
+      "aggregate": "sum",
+      "title": "Happiness Index",
+      "scale": { "domain": [0, 10] }
+    },
+    "x": { "field": "country" },
+    "tooltip": [
+      { "field": "country", "type": "nominal" },
+      { "field": "score", "type": "quantitative" }
+    ]
+  }
+}
