@@ -7,7 +7,7 @@
     "type": "equalEarth"
   },
   "data": {
-    "url": "../data/ne_110m_countries.topojson",
+    "url": "data/ne_110m_countries.topojson",
     "format": { "type": "topojson", "feature": "ne_110m_countries" }
   },
   "transform": [
@@ -15,7 +15,7 @@
       "lookup": "properties.NAME",
       "from": {
         "data": {
-          "url": "../data/countries-happiness-2022.csv",
+          "url": "data/countries-happiness-2022.csv",
           "format": { "type": "csv" }
         },
         "key": "country",
@@ -27,7 +27,7 @@
   "layer": [
     {
       "data": {
-        "url": "../data/ne_110m_countries.topojson",
+        "url": "data/ne_110m_countries.topojson",
         "format": {
           "type": "topojson",
           "feature": "ne_110m_graticules_30"
@@ -73,5 +73,8 @@
         ]
       }
     }
-  ]
+  ],
+  "config": {
+    "view": { "stroke": "transparent" }
+  }
 }
